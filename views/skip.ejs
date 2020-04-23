@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%- title%></title>
+    <style>
+      .main {
+        width: 400px;
+        margin: 0 auto;
+        color: rgba(0, 0, 0, 0.884);
+        text-align: center;
+        background-color: rgba(220, 220, 220, 0.575);
+        padding: 20px;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1><%- title%></h1>
+      <p><%- content%></p>
+      <p><span id="time"><%- num%></span>秒后跳转至：<a href="<%- href %>">登录页面</a></p>
+    </div>
+    <script>
+      let n = '<%- num%>'
+      setInterval(() => {
+        n--
+        if (n < 0) {
+          location.href = '<%- href%>'
+        } else {
+          document.getElementById('time').innerHTML = n
+        }
+      }, 990)
+    </script>
+  </body>
+</html>

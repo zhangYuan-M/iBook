@@ -1,0 +1,211 @@
+/* body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+} */
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #fafafa;
+}
+.header {
+  height: 170px;
+  width: 100%;
+  min-width: 1200px;
+}
+.navheader {
+  background-image: url(../images/logo.png);
+  background-color: black;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: auto 150px;
+}
+.navheader {
+  height: 110px;
+  width: 100%;
+}
+.nav {
+  width: 100%;
+  height: 61px;
+  background-color: #4b4b4b;
+
+} 
+.nav-list {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.link {
+  width: 100px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: white;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+}
+.search-box input {
+  line-height: 30px;
+  height: 30px;
+  background-color: whitesmoke;
+  font-size: 18px;
+}
+.search-box button {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 80px;
+  font-size: 15px;
+  margin: 0 10px;
+  background-color: ghostwhite;
+  border-radius: 4px;
+}
+.icon {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../images/search-icon.png);
+}
+.notify {
+  height: 35px;
+  background-color: #f5f2f0;
+}
+.content {
+  width: 1140px;
+  margin: 0 auto;
+  display: flex;
+}
+.book-box {
+  width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.book-item {
+  position: relative;
+  width: 213px;
+  height: 350px;
+  padding: 5px;
+  border: 1px solid gainsboro;
+  margin: 5px;
+  text-align: center;
+  font-size: 13px;
+  background-color: white;
+  font-family: '微软雅黑;
+}
+.book-item:hover{
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,.25);
+}
+.book-item img {
+  width: 90%;
+  height: 79%;
+} 
+.book-item h3 {
+  line-height: 35px;
+  height: 35px;     
+  white-space:nowrap;
+     overflow:  hidden ;
+  text-overflow:ellipse;    
+  border-radius: 2px;
+
+  border-bottom: 1px dashed gainsboro;
+}
+.book-item p {
+  position: relative;
+  background-color: #ebebebc0;
+  text-align: center;
+/* left: 24px; */
+  top: 6px;
+  color: #4b4b4b;
+}
+.book-item span {
+  position: absolute;
+  left: -5px;
+  top: 10px;
+  height: 23px;
+  width: 80px;
+  font-size: 15px;
+  background-color: rgba(58, 56, 56, 0.651);
+  color: white;
+}
+.book-item a {
+  text-decoration: none;
+  color: rgb(31, 30, 30);
+}
+.side-box {
+  width: 220px;
+  /* height: 220px; */
+  background-color: #f5f2f0;
+  border-left: 1px solid skyblue;
+  border-bottom: 1px solid skyblue;
+  background-image: url(../images/pay.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.link a {
+  display: block;
+  width: 100px;
+  text-decoration: none;
+  color: rgb(236, 235, 235);
+}
+
+.link a:hover{
+  background-color: rgba(34, 34, 34, 0.637);
+}
+
+.foot {
+  line-height: 50px;
+  background-color: rgb(94, 88, 68);
+  color: whitesmoke;
+  text-align: center;
+}
+.link  a:active{color:yellow}
+.active { 
+  background-color: black;
+} 
+
+.page-box{
+  padding: 20px;
+  background-color: white;
+  margin: 0 auto;
+  text-align: center;
+  width: 79%;
+  position: relative;
+  left: -7px;
+}
+.page-box a {
+  margin: 4px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 4px;
+  background-color: rgb(175, 172, 149);
+  padding: 3px;
+  color: rgb(255, 255, 255)
+}
+.container {
+  border-radius: 4px;
+  text-align: center;
+  justify-content: space-between;
+  width: 65%;
+  margin: 0 auto;
+  background-color:  rgba(226, 226, 226, 0.644);
+  padding: 10px;
+}
+.container div {
+  height: 24px;
+  display: inline-block;
+  background-color: rgb(175, 172, 149);
+  width: 28px;
+}

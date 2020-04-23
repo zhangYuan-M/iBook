@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>zyBook</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="navheader"></div>
+      <div class="nav">
+        <div class="nav-list">
+          <% for(let j = 0; j< navs.length; j++) {%>
+          <div class="link"><a href="<%-navs[j].cate_nav%>"><%-navs[j].category_name%></a></div>
+          <%}%>
+          <div class="search-box">
+            <input type="text" id="input-box" />
+            <button id="search_btn">
+              <div class="icon"></div>
+              <span>搜索</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="notify"></div>
+      <div class="content">
+        <div class="book-box">
+          <% for(let i=0;i< books.length;i++) { %>
+          <div class="book-item">
+            <a href="<%= books[i].book_cate_id+ '/'+books[i].book_id %>">
+              <span><%- books[i].book_cate%></span>
+              <img src="<%- books[i].book_img_url%>" />
+              <h3><%- books[i].book_name%></h3>
+              <p><%- books[i].book_author%></p>
+            </a>
+          </div>
+          <% }%>
+        </div>
+        <div class="side-box"></div>
+      </div>
+    </div>
+    <div class="foot">
+      iBook 本站所有资源，均来自互联网，如有侵权，请联系站长，本站不负一切责任！
+    </div>
+  </body>
+  <script src="/javascripts/golbal.js"></script>
+</html>

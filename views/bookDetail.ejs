@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>zyBook</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/detail.css" />
+    <link rel="stylesheet" href="/stylesheets/icon-font.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="navheader"></div>
+      <div class="nav">
+        <div class="nav-list">
+          <% for(let j = 0; j< navs.length; j++) {%>
+          <div class="link"><a href="<%-navs[j].cate_nav%>"><%-navs[j].category_name%></a></div>
+          <%}%>
+          <div class="search-box">
+            <input type="text" />
+            <button>
+              <div class="icon"></div>
+              <span>搜索</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="main">
+          <div class="notify"></div>
+          <div class="content">
+            <!-- 左侧内容区域 -->
+            <div class="book-box">
+              <div class="book-info">
+                <div class="book-name">
+                  <h2><%= details[0].book_name%></h2>
+                </div>
+                <div class="book-case">
+                  <span class="book-cate"><i class="iconfont icon-users"></i>小说文学</span>
+                  <span class="book-cate"><i class="iconfont icon-danju"></i><%- details[0].book_author%></span>
+                  <span class="book-cate"><i class="iconfont icon-baobiao"></i>查看更多</span>
+                </div>
+              </div>
+              <div class="book-desc">
+                <div class="img">
+                  <img src="<%- details[0].img_url%>" />
+                </div>
+                <div class="book-detail">
+                  <div class="icon-text">
+                    <i></i>
+                    <p>书名：<span><%- details[0].book_name%></span></p>
+                  </div>
+                  <div class="icon-text">
+                    <i></i>
+                    <p>作者：<span><%- details[0].book_author%></span></p>
+                  </div>
+                  <div class="icon-text">
+                    <i></i>
+                    <p>浏览：<span>593次</span></p>
+                  </div>
+                  <div class="icon-text">
+                    <i></i>
+                    <p>类型：<span>小说文学</span></p>
+                  </div>
+                  <div class="icon-text">
+                    <i></i>
+                    <p>时间：<span>2020-04-21</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="book-brief">
+                <h2>内容简介</h2>
+                <p>
+                  内容简介 <%- details[0].content_brief%>
+                </p>
+                <h2>作家简介</h2>
+                <p>
+                  <%- details[0].author_brief%>
+                </p>
+                <h2>下载地址</h2>
+                <table class="dltable">
+                  <tbody>
+                    <tr>
+                      <td style="background-color: #f9f9f9; width: 20px;" rowspan="3"><p>文件下载</p></td>
+                      <td><i class="fa fa-list-alt"></i>&nbsp;&nbsp;文件名称：<%- details[0].book_name%></td>
+                      <td><i class="fa fa-th-large"></i>&nbsp;&nbsp;文件大小：8MB</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">
+                        <i class="fa fa-volume-up"></i
+                        >&nbsp;&nbsp;下载声明：本站所有资源均来自网络，不得用于商业用途，如有【版权】或【链接失效】等问题，请留言告知！
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">
+                        <i class="fa fa-download"></i>&nbsp;&nbsp;下载地址：<a
+                          href="<%- details[0].download_url%>"
+                          rel="nofollow"
+                          >城通网盘</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="recommend">
+                  <p>猜您喜欢</p>
+                  <div class="book-box-recommend">
+                    <div class="book-item">
+                      <a href="">
+                        <span>span</span>
+                        <img
+                          src="https://sobooks.cc/wp-content/themes/Git/timthumb.php?src=https://images-cn.ssl-images-amazon.com/images/I/31qedkPSQ5L.jpg&h=260&w=190&q=90&zc=1&ct=1"
+                        />
+                        <h3><%- details[0].book_name%></h3>
+                        <p><%- details[0].book_author%></p>
+                      </a>
+                    </div>
+                    <div class="book-item">
+                      <a href="">
+                        <span>英语原版</span>
+                        <img src="https://images-cn.ssl-images-amazon.com/images/I/51UalQRS0mL.jpg" />
+                        <h3>英国《金融时报》</h3>
+                        <p>英国记者</p>
+                      </a>
+                    </div>
+                    <div class="book-item">
+                      <a href="">
+                        <span>励志成功</span>
+                        <img src="https://img1.doubanio.com/lpic/s26653828.jpg" />
+                        <h3>向诸葛亮借智慧</h3>
+                        <p>赵玉平</p>
+                      </a>
+                    </div>
+                    <div class="book-item">
+                      <a href="">
+                        <span>学习教育</span>
+                        <img src="https://img1.doubanio.com/lpic/s29008179.jpg" />
+                        <h3>如何阅读</h3>
+                        <p>艾比・马克斯</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 右侧广告区域 -->
+            <div class="side-box">11</div>
+          </div>
+        </div>
+
+        <div class="foot">
+          iBook 本站所有资源，均来自互联网，如有侵权，请联系站长，本站不负一切责任！
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

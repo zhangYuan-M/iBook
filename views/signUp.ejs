@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://127.0.0.1/dede/login.php?gotopage=%2Fdede%2Findex.php -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>网站后台管理系统</title>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/login.css" />
+    <script type="text/javascript" src="https://cdn.staticfile.org/jquery/3.5.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/login.js"></script>
+  </head>
+  <body style="overflow: hidden;">
+    <div class="pagewrap">
+      <div class="main">
+        <div class="header"></div>
+        <div class="content">
+          <div class="con_left"></div>
+          <div class="con_right">
+            <div class="con_r_top">
+              <a
+                href="javascript:;"
+                class="left"
+                style="
+                  color: rgb(153, 153, 153);
+                  border-bottom-width: 2px;
+                  border-bottom-style: solid;
+                  border-bottom-color: rgb(222, 222, 222);
+                "
+                >关注我们</a
+              >
+              <a
+                href="javascript:;"
+                class="right"
+                style="
+                  color: rgb(51, 51, 51);
+                  border-bottom-width: 2px;
+                  border-bottom-style: solid;
+                  border-bottom-color: rgb(46, 85, 142);
+                "
+                >注册管理</a
+              >
+            </div>
+            <ul>
+              <li class="con_r_left" style="display: none;">
+                <div class="erweima">
+                  <div class="qrcode">
+                    <div id="output" style="width: 100%; position: relative;">
+                      <img src="/images/pay.jpg" style="width: 174px; height: 174px;" />
+                    </div>
+                  </div>
+                </div>
+                <div style="height: 70px;">
+                  <p>微信扫码 安全便捷</p>
+                </div>
+              </li>
+
+              <li class="con_r_right" style="display: block;">
+                <form name="form1" method="post" action="/signUp">
+                  <div class="user">
+                    <div>
+                      <span class="user-icon"></span>账号
+                      <input type="text" id="userid" name="username" placeholder="　输入账号" value="" />
+                    </div>
+
+                    <div>
+                      <span class="mima-icon"></span> 邮箱
+                      <input type="text" id="email" name="email" placeholder="　输入邮箱" value="" />
+                    </div>
+                    <div>
+                      <span class="mima-icon"></span> 密码
+                      <input type="password" id="pwd" name="pwd" placeholder="　输入密码" value="" />
+                    </div>
+                    <div>
+                      <span class="yzmz-icon"></span>
+                    </div>
+                  </div>
+                  <br />
+                  <button id="btn_Login" type="submit">点击注册</button>
+                </form>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <!-- 解析插入数据 -->
+    <h1><%- foo%></h1>
+    <!-- 会进行转义 -->
+    <h1><%= foo%></h1>
+
+    <h1>条件判断</h1>
+    <% if (title) {%>
+    <p>我是title标题</p>
+    <% } else { %>
+    <p>我不是标题</p>
+    <% }%>
+
+    <h1>循环渲染</h1>
+    <% for(let i = 0; i < list.length;i++) {%>
+    <li><%= list[i] %></li>
+    <%}%>
+  </body>
+</html>
